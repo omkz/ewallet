@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :transactions do
     resources :deposits
     resources :withdraws
+    resources :transfers
   end
   
   devise_for :users
