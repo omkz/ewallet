@@ -18,14 +18,12 @@
         </a>
 
         <div class="navbar-dropdown">
+          <%= link_to  "Deposit", new_transactions_deposit_path, class: "navbar-item" %>
           <a class="navbar-item">
-            About
+            Withdraw
           </a>
           <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
+            Trasnsfer
           </a>
           <hr class="navbar-divider">
           <a class="navbar-item">
@@ -38,14 +36,14 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-       <% if user_signed_in? %>
-                        Logged in as  <strong>  <%= current_user.email %> </strong>. 
-                        <%= link_to 'Edit profile', edit_user_registration_path %>
-                        <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
-                    <% else %>
-                        <%= link_to "Sign up", new_user_registration_path, :class => 'button is-primary'  %>
-                        <%= link_to "Login", new_user_session_path, :class => 'button is-light'  %>
-                    <% end %>
+          <% if user_signed_in? %>
+            Logged in as  <strong>  <%= current_user.email %> </strong>. 
+            <%= link_to 'Edit profile', edit_user_registration_path %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, :class => 'button is-primary'  %>
+            <%= link_to "Login", new_user_session_path, :class => 'button is-light'  %>
+          <% end %>
           </a>
         </div>
       </div>
