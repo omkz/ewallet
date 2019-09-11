@@ -3,6 +3,8 @@ class Deposit < Transaction
     ActiveRecord::Base.transaction do
       self.save!
       self.update_balance
+    rescue ActiveRecord::RecordInvalid => e
+      raise ActiveRecord::Rollback
     end
   end
 
