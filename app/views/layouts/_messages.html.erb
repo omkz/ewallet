@@ -1,2 +1,17 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if notice %>
+  <div class="container">
+  <div class="notification is-primary">
+    <button class="delete"></button>
+    <%= notice %>
+  </div>
+</div>
+<% end %>
+<% if alert %>
+  <div class="container">
+  <div class="notification is-warning">
+    <button class="delete"></button>
+    <%= alert %>
+  </div>
+</div>
+<% end %>
+

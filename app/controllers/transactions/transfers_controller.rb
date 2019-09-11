@@ -15,7 +15,7 @@ class Transactions::TransfersController < ApplicationController
       flash[:notice] = 'transfer was successfully processed.'
       redirect_to transactions_transfer_path(@transfer)
     else
-      flash.now[:notice] = @transfer.errors.empty? ? 'Transfer Error' : @transfer.errors.full_messages.to_sentence
+      flash.now[:alert] = @transfer.errors.empty? ? 'Transfer Error' : @transfer.errors.full_messages.to_sentence
       render :new
     end
   end

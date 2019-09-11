@@ -14,7 +14,7 @@ class Transactions::DepositsController < ApplicationController
       flash[:notice] = 'deposit was successfully processed.'
       redirect_to transactions_deposit_path(@deposit)
     else
-      flash.now[:notice] = @deposit.errors.empty? ? 'deposit Error' : @deposit.errors.full_messages.to_sentence
+      flash.now[:alert] = @deposit.errors.empty? ? 'deposit Error' : @deposit.errors.full_messages.to_sentence
       render :new
     end
   end
