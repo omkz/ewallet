@@ -1,4 +1,4 @@
-# E-wallet
+# Ewall
 
 Ewall is Simple e-wallet application built with Ruby on Rails.
 
