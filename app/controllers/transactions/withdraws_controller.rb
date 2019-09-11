@@ -14,7 +14,7 @@ class Transactions::WithdrawsController < ApplicationController
       flash[:notice] = 'Withdrawal was successfully processed.'
       redirect_to transactions_withdraw_path(@withdraw)
     else
-      flash.now[:alert] = @withdraw.errors.empty? ? 'Transaction Error' : @withdraw.errors.full_messages.to_sentence
+      flash.now[:alert] = @withdraw.errors.empty? ? 'Withdraw Error' : @withdraw.errors.full_messages.to_sentence
       render :new
     end
   end
