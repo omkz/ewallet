@@ -1,4 +1,6 @@
 class Transfer < Transaction
+  validates :from_id, presence: true, numericality: true
+  validates :to_id, presence: true, numericality: true
   validate :validate_sender_receiver
 
   def create
