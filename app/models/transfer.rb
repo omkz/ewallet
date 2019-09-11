@@ -6,6 +6,9 @@ class Transfer < Transaction
       self.save!
       self.update_balance_sender
       self.update_balance_receiver
+    rescue StandardError => e
+      errors.add(:base, e.message) if self.errors.empty?
+      raise ActiveRecord::Rollback
     end
   end
 
