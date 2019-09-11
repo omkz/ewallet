@@ -1,24 +1,30 @@
-# README
+# E-wallet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ewall is Simple e-wallet application built with Ruby on Rails.
 
-Things you may want to cover:
+### Setting up the development environment
 
-* Ruby version
+1. Get the code. Clone this git repository:
 
-* System dependencies
+  ```bash
+  git clone git://github.com/omkz/e-wallet.git
+  cd e-wallet
+  ```
 
-* Configuration
+1. Install the required gems by running the following command in the project root directory:
 
-* Database creation
+  ```bash
+  bundle install
+  ```
 
-* Database initialization
+1. Create and initialize the database:
 
-* How to run the test suite
+  ```bash
+  bundle exec rake db:migrate
+  ```
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Start the development server:
 
-* Deployment instructions
-
-* ...
+  ```bash
+  rails s
+  ```
