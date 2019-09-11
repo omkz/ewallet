@@ -2,6 +2,9 @@
 
 Ewall is Simple e-wallet application built with Ruby on Rails.
 
+![Ewall Screenshot](https://raw.githubusercontent.com/omkz/e-wallet/master/public/screenshot.png)
+
+
 ### Setting up the development environment
 
 1. Get the code. Clone this git repository:
